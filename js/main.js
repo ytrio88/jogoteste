@@ -1,21 +1,19 @@
-let stop = false
+
+let sreader = [], index = 0
 function fa0(){
     document.getElementById("menu").classList.add("hidden")
     document.getElementById("mainp").classList.add("block")
-    addText("Antes de começar o jogo, vamos definir como será o seu personagem.")
-    addText("agg.")
-}
-function wait()
-{
-    if (!stop)
-        setTimeout(wait, 1000)
+    sreader = story
+    addText(sreader[index].t)
 }
 function next()
 {
-    stop = true
+    ++index
+    addText(sreader[index].t)
+    if (sreader[index].a != null)
+        eval(sreader[index].a)
 }
 function addText(a)
 {
     document.getElementById("dialogo").innerHTML = a
-    wait()
 }

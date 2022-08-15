@@ -1,0 +1,11 @@
+canvas {
+    height: calc(100vh - 240px);
+    width: calc(100vw/3  - 30px);
+    margin: 20px;
+}
+#canvas {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 33% 34% 33%;
+    width: calc(100vw - 80px);
+}

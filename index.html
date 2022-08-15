@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/base.css">
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/canvas.css">
+    <script src="js/story.js"></script>
 </head>
 <body>
     <div id="menu" class="menu">
@@ -15,9 +16,15 @@
         <button>Sair</button>
     </div>
     <div class="hidden" id="mainp">
-        <div id="canvas"></div>
+        <div id="canvas">
+            <canvas id="c1"></canvas>
+            <canvas id="c2"></canvas>
+            <canvas id="c3"></canvas>
+        </div>
         <div id="dialogo"></div>
         <img src="images/icons/right.png" alt="" class="icons" id="next" onclick="next()">
     </div>
+    <script src="js/main.js"></script>
+    <script src="js/img.js"></script>
 </body>
 </html>
