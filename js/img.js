@@ -1,20 +1,24 @@
 
 function criar()
 {
-    console.log(6646)
-    let imgs = []
-    for (let i of "body,head,calca1,camisa1".split(","))
-    {
-        let j = new Image()
-        j.src = "./images/charparts/" + i +".png"
-        j.onload = () => {
-            canvas.width = canvas.offsetWidth;
-            canvas.height = canvas.offsetHeight;
-            for (let i = 0; i < imgs.length; i++)
-                ctx.drawImage(imgs[i], (canvas.offsetWidth * (1 - .65))/2, 0, canvas.offsetWidth * .65, canvas.offsetHeight);
-        }
+    console.log(464)
+    c2.start()
+     let i1 = new Image()
+     i1.src = "images/charparts/body.png"
+    console.log(i1)
+    let img1 = new drawfigure(100,250,i1,0,0)
+}
+function drawfigure(w,h,img,x,y)
+{
+    this.width = w;
+    this.height = h;
+    this.x = x;
+    this.y = y;
+    this.update = function() {
+      ctx = c2.context;
+        ctx.drawImage(img,
+          this.x,
+          this.y,
+          this.w, this.h);
     }
-    var canvas = document.getElementById("c2");
-    var ctx = canvas.getContext("2d");
-    console.log(imgs)
 }
